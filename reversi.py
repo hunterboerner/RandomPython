@@ -15,6 +15,7 @@
 #  0. You just DO WHAT THE F*** YOU WANT TO.
 
 turn = "O"
+oppTurn = 'X'
 start0 = [' ',' ',' ','O','X',' ',' ',' ',]	
 start1 = [' ',' ',' ','X','O',' ',' ',' ',]
 board = []
@@ -24,8 +25,10 @@ def switch():
 	global turn
 	if turn == 'O':
 			turn = 'X'
+			oppTurn = 'O'
 	elif turn == 'X':
 		turn = 'O'
+		oppTurn = 'X'
 
 for x in xrange(3):
 	board.append([' ',' ',' ',' ',' ',' ',' ',' ',])
@@ -52,6 +55,6 @@ while play == True:
 		print board
 		print inputList
 		print inputListRaw
-		board[int(inputListRaw[1])-1][inputList[0]-1] = turn
+		if board[int(inputListRaw[1])-1][inputList[0]-1] != (turn or oppTurn):
+			board[int(inputListRaw[1])-1][inputList[0]-1] = turn
 		switch()
-
