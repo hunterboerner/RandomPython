@@ -52,9 +52,10 @@ while play == True:
 	if inputChar == "END":
 		play = False
 	else:
-		print board
-		print inputList
-		print inputListRaw
-		if board[int(inputListRaw[1])-1][inputList[0]-1] != (turn or oppTurn):
+		print board[int(inputListRaw[1])-1][inputList[0]-1]
+		print turn
+		print oppTurn
+		if board[int(inputListRaw[1])-1][inputList[0]-1] == ' ':
 			board[int(inputListRaw[1])-1][inputList[0]-1] = turn
-		switch()
+			print 'Me Gusta'
+			switch()
