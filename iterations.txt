@@ -1,0 +1,4 @@
+insert: 500500
+bubble: 935064
+quicksort: 10336
+comb: 4297
