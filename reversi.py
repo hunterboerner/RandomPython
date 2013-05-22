@@ -20,6 +20,13 @@ start1 = [' ',' ',' ','X','O',' ',' ',' ',]
 board = []
 play = True
 
+def switch():
+	global turn
+	if turn == 'O':
+			turn = 'X'
+	elif turn == 'X':
+		turn = 'O'
+
 for x in xrange(3):
 	board.append([' ',' ',' ',' ',' ',' ',' ',' ',])
 board.append(start0)
@@ -46,8 +53,5 @@ while play == True:
 		print inputList
 		print inputListRaw
 		board[int(inputListRaw[1])-1][inputList[0]-1] = turn
-		if turn == 'O':
-			turn = 'X'
-		elif turn == 'X':
-			turn = 'O'
-		
+		switch()
+
