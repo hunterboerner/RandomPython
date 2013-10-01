@@ -1,6 +1,3 @@
-#filename:sorting.py
-#author:Randy Hollensbe
-
 import random
 
 l = []
