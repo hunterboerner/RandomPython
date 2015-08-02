@@ -1,9 +1,7 @@
 
-inputint = 1
+def blarg(inputint)
 stop = false
 while stop == false do
-  puts "Enter a number"
-  inputint = gets.chomp.to_i
   if inputint == 0
     stop = true
   end
@@ -51,13 +49,4 @@ while stop == false do
     puts x
   end
 end
-
-# 100
-# 90
-# 50
-# 40
-# 10
-# 9
-# 5
-# 4
-# 1
+end
